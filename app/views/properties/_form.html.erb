@@ -39,4 +39,24 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  <hr>
+
+  <%= form.fields_for :nearest_station do |nearest_station| %>
+    <div class="field">
+      <%= nearest_station.label :railway_line, "路線名" %>
+      <%= nearest_station.text_field :railway_line %>
+    </div>
+
+    <div class="field">
+      <%= nearest_station.label :station_name, "駅名" %>
+      <%= nearest_station.text_field :station_name %>
+    </div>
+
+    <div class="field">
+      <%= nearest_station.label :time_to_station, "徒歩分数" %>
+      <%= nearest_station.number_field :time_to_station %>
+    </div>
+
+  <% end %>
 <% end %>

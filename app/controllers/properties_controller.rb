@@ -10,15 +10,18 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
+    @nearest_station = @property.nearest_station
   end
 
   # GET /properties/new
   def new
     @property = Property.new
+
   end
 
   # GET /properties/1/edit
   def edit
+    
   end
 
   # POST /properties
